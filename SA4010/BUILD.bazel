@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_tool_library")
+
+go_tool_library(
+    name = "SA4010",
+    srcs = ["analyzer.go"],
+    importpath = "github.com/yext/staticcheck-bazel/SA4010",
+    visibility = ["//visibility:public"],
+    deps = ["@co_honnef_go_tools//staticcheck:go_default_library"],
+)
